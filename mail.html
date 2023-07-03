@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메일인증</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    body {
+      color: #1D1D1F;
+      padding: 50px;
+    }
+    .main-authenticate {
+      width: 700px;
+      margin: 0 auto;
+    }
+    .main-authenticate > .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 27px 30px;
+      background-color: #F4F6FA;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .main-authenticate > .content > div {
+      padding: 40px 0;
+    }
+    .main-authenticate > .content > div {
+      border-bottom: 1px solid #1D1D1F;
+    }
+    .main-authenticate > .content > div:first-of-type p {
+      font-size: 28px;
+      font-weight: 500;
+    }
+    
+    .main-authenticate >.content > div:last-of-type p span {
+      color: #335FFF;
+    }
+    .main-authenticate >.content > div:last-of-type button {
+      background-color: #335FFF;
+      border-radius: 4px;
+      color: #FFFFFF;
+      font-weight: 500;
+      padding: 13px 73px;
+      border: none;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+    .main-authenticate >.content > div:last-of-type .img {
+      padding: 20px 0;
+      border-top: 1px solid #EAEDF4;
+      border-bottom: 1px solid #EAEDF4;
+    }
+    .main-authenticate >.content > div:last-of-type > div:first-of-type > div {
+      text-align: right;
+      margin: 30px 0;
+    }
+
+    .main-authenticate >.content > div:last-of-type > div:first-of-type > .comment {
+      text-align: inherit;
+      line-height: 28px;
+    }
+    .main-authenticate >.content > div:last-of-type > div:first-of-type > .comment .title {
+      width: 80px;
+      text-align: right;
+      display: inline-block;
+      font-weight: 500;
+    }
+    .main-authenticate >.content > div:last-of-type > div:first-of-type > .comment .license {
+      width: 369px;
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid #335FFF;
+      border-radius: 4px;
+      background-color: #335FFF0D;
+      text-align: center; 
+      margin-top: 16px;
+      margin-bottom: 40px;
+      font-weight: 500;
+    } 
+    .main-authenticate >.content > div:last-of-type > div:first-of-type > .comment .content {
+      display: inline-block;
+      font-weight: 400;
+    }
+    .main-authenticate >.content > div:last-of-type > div:first-of-type > div p {
+      font-weight: 500;
+    }
+    .main-authenticate >.content > div:last-of-type > div:last-of-type {
+      text-align: center;
+    }
+    .main-authenticate >.content > div:last-of-type > div:last-of-type {
+      padding: 30px;
+      border-top: 1px solid #D7DBE4;
+    }
+    .main-authenticate >.content > div:last-of-type > div:last-of-type a {
+      display: inline-block;
+      border: 1px solid #D7DBE4;
+      border-radius: 4px;
+      background-color: #F4F6FA;
+      padding: 12px 41px;
+      color: #1D1D1F;
+      text-decoration: none;
+    }
+    .main-authenticate >.content > div:last-of-type > div:last-of-type p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #666666;
+      margin-top: 20px;
+    }
+    .main-authenticate > .bottom {
+      text-align: center;
+      margin: 7px;
+    }
+    .main-authenticate > .bottom div {
+      text-align: center;
+      margin: 20px;
+    }
+    .main-authenticate > .bottom p {
+      font-size: 12px;
+      font-weight: 500;
+      color: #838A94;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-authenticate">
+    <div class="top">
+      <div>
+        <img src="img/mail_logo.svg" alt="logo" />
+      </div>
+      <p>
+        <img src="img/mail_text.svg" alt="logo_text" />
+      </p>
+    </div>
+    <div class="content">
+      <div>
+        <p>회원가입 완료 및 메일인증 안내</p>
+      </div>
+      <div>
+        <div>
+          <p>안녕하세요. <span>elin</span> 회원님</p>
+          <p>티키타 (Tkita) 회원가입을 환영합니다. </p>
+          <br />
+          <p>아래 이메일 인증하기를 클릭하여 인증 완료하시기 바랍니다.</p>
+
+          <button type="button">이메일 인증하기</button>
+          <p>본 인증메일의 유효기간은 24시간이며, 유효 시간이 만료되었을 경우 인증번호 재발송을 진행 해 주시기 바랍니다.</p>
+          <div class="img">
+            <img src="img/mail-content.svg" />
+          </div>
+          <div class="comment">
+            <div>
+              <p class="license-title">라이센스 제공</p>
+              <div class="license">Hecmz-5Qzat-I6w5v-Bi2w7</div>
+            </div>
+            <div>
+              <p class="title">서비스명 ｜</p>
+              <p class="content">티키타캡션</p>
+            </div>
+            <div>
+              <p class="title">이용기간 ｜</p>
+              <p class="content">발급 후 30일 이내</p>
+            </div>
+            <div>
+              <p class="title">사용처 ｜</p>
+              <p class="content">티키타 캡션 홈페이지 </p>
+            </div>
+            <div>
+              <p class="title">등록방법 ｜</p>
+              <p class="content">로그인 > My정보 > 라이센스등록</p>
+            </div>
+          </div>
+          <div>
+            <p>감사합니다.</p>
+            <p>- 티키타 - </p>
+          </div>
+        </div>
+        <div>
+          <a href="">Tkita 바로가기</a>
+          <p>본 메일은 발신 전용 메일입니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>
+        <img src="img/mail_company_logo.svg" alt="logo" />
+      </div>
+      <p>&copy; Copyright 2023 AIRSOUND Inc. All Rights Reserved</p>
+    </div>
+  </div>
+</body>
+</html>

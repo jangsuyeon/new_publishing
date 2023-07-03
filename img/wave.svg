@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="236" viewBox="0 0 1920 236">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_24143" data-name="사각형 24143" width="1920" height="236" transform="translate(0 4538)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_5" data-name="마스크 그룹 5" transform="translate(0 -4538)" clip-path="url(#clip-path)">
+    <g id="bg-wave-line" transform="translate(1 4491.109)">
+      <path id="모양_522" d="M-2,1718s295.4-215.06,572-76,388-4,388-4,180.66-212.79,395,5c246.06,250.03,570,0,570,0" transform="translate(0 -1498)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="2" stroke-dasharray="0.001 4" fill-rule="evenodd" opacity="0.6"/>
+      <path id="모양_522_복사_3" d="M-6,1725c-6.473-6.72,298.43-220.95,576-84,113.6,56.05,153,54,153,54" transform="translate(0 -1498)" fill="none" stroke="#4570fb" stroke-width="2" fill-rule="evenodd"/>
+      <path id="모양_522_복사" d="M-186,1730s325.4-226.06,602-87,389,10,389,10c55.593-40.87,176.662-187.42,551-9,361.67,172.38,584-40.78,578-51" transform="translate(0 -1498)" fill="none" stroke="#4570fb" stroke-width="1" fill-rule="evenodd" opacity="0.1"/>
+      <path id="모양_522_복사_2" d="M-186,1690s339.916,77.8,602-87c214.6-134.94,325.791,233.59,700,65,209.51-94.39,771.89-153.31,829-78" transform="translate(0 -1498)" fill="none" stroke="#3fe4b4" stroke-width="1" fill-rule="evenodd" opacity="0.25"/>
+      <circle id="포인트" cx="5" cy="5" r="5" transform="translate(718.5 194.5)" fill="#2e61cb"/>
+      <circle id="포인트_배경" cx="18.5" cy="18.5" r="18.5" transform="translate(704.5 180.5)" fill="#2e61cb" opacity="0.1"/>
+    </g>
+  </g>
+</svg>

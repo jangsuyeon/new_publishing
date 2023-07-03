@@ -1,0 +1,52 @@
+.gauge-box {
+  margin-top: 25px;
+}
+.count-gauge {
+  width: 100%;
+  height: 15px;
+  background-color: #E8EAF2;
+  box-shadow: inset 0.5px 0.5px 1px #0000004D;
+  border-radius: 10px;
+  position: relative;
+}
+.gauge {
+  display: inline-block;
+  width: 10%;
+  height: 15px;
+  background-color: #335FFF;
+  background-position-y: -10px;
+  border-radius: 10px;
+  transition: 1s;
+  position: absolute;
+}
+.count {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 500;
+  z-index: 1;
+}
+.loading-c {
+  font-size: 10px;
+  color: #A7B1C2;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.download-com {
+  display: none;
+}
+
+.loading-c img {
+  width: 15px;
+  height: 15px;
+  vertical-align: bottom;
+}
+
+
+/* gauge 다크모드 */
+[data-theme="dark-mode"] .count-gauge {
+  background-color: #101113;
+}

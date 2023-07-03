@@ -1,0 +1,11 @@
+<svg id="icon_손쉬운검색" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_27020" data-name="사각형 27020" width="54" height="54" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_23067" data-name="그룹 23067" clip-path="url(#clip-path)">
+    <path id="패스_74290" data-name="패스 74290" d="M51.756,52.6a1.59,1.59,0,0,1-1.128-.467L39.311,40.812a1.6,1.6,0,0,1,2.256-2.257L52.884,49.873A1.6,1.6,0,0,1,51.756,52.6" transform="translate(-7.062 -6.925)" fill="#335fff"/>
+    <path id="패스_74291" data-name="패스 74291" d="M24.284,39.907A14.864,14.864,0,1,1,39.153,25.04,14.88,14.88,0,0,1,24.284,39.907m0-26.537A11.673,11.673,0,1,0,35.962,25.04,11.682,11.682,0,0,0,24.284,13.37" transform="translate(-1.714 -1.851)" fill="#335fff"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_29082" data-name="사각형 29082" width="24" height="24" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="사각형_29080" data-name="사각형 29080" width="16.349" height="15.948" transform="translate(3.835 5.384)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icon_home" opacity="0.6">
+    <g id="그룹_27923" data-name="그룹 27923" clip-path="url(#clip-path)">
+      <g id="그룹_27922" data-name="그룹 27922">
+        <g id="그룹_27921" data-name="그룹 27921" clip-path="url(#clip-path)">
+          <path id="패스_85620" data-name="패스 85620" d="M16.665,6.368V5a1.166,1.166,0,0,1,1.167-1.167H19A1.166,1.166,0,0,1,20.165,5V9.43L22.1,11.121a1.168,1.168,0,0,1-1.539,1.757L12,5.384,3.435,12.878A1.167,1.167,0,0,1,1.9,11.121L11.23,2.956a1.172,1.172,0,0,1,1.539,0Z" fill="#fff"/>
+          <g id="그룹_27920" data-name="그룹 27920" opacity="0.3">
+            <g id="그룹_27919" data-name="그룹 27919">
+              <g id="그룹_27918" data-name="그룹 27918" clip-path="url(#clip-path-3)">
+                <path id="패스_85621" data-name="패스 85621" d="M12,5.384l8.17,7.148.015,7.338a1.457,1.457,0,0,1-1.458,1.462H15.791a1.458,1.458,0,0,1-1.458-1.458V16.655a1.166,1.166,0,0,0-1.167-1.167H10.833a1.164,1.164,0,0,0-1.166,1.167v3.219a1.459,1.459,0,0,1-1.459,1.458H5.3a1.459,1.459,0,0,1-1.459-1.458l0-7.346Z" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

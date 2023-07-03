@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/contextMenu.css" rel="stylesheet" type="text/css" />
+  <link href="css/gauge.css" rel="stylesheet" type="text/css" />
+  <title>티키타 노트</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.9.2/jquery.contextMenu.js" integrity="sha512-2ABKLSEpFs5+UK1Ol+CgAVuqwBCHBA0Im0w4oRCflK/n8PUVbSv5IY7WrKIxMynss9EKLVOn1HZ8U/H2ckimWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.9.2/jquery.ui.position.js" integrity="sha512-vBR2rismjmjzdH54bB2Gx+xSe/17U0iHpJ1gkyucuqlTeq+Q8zwL8aJDIfhQtnWMVbEKMzF00pmFjc9IPjzR7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://rawgithub.com/shvetsgroup/jquery.multisortable/master/src/jquery.multisortable.js"></script> -->
+  <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+  <style>
+    .highlight {
+      background-color: #AABFF3;
+    }
+  </style>
+</head>
+
+<body class="no-scroll">
+  <header class="tkita_note">
+    <div class="note_header">
+      <div class="note_header_left">
+        <a href="index.html" class="trxHdrLgo">
+          <img src="img/img_note_logo.svg" alt="tkita_note" />
+        </a>
+      </div>
+      <div class="note_header_right">
+        <a href="index.html">
+          <img src="img/icon_note_home.svg" alt="home" />
+        </a>
+        <a class="logout" href="">로그아웃</a>
+        <div class="login-user">
+          <div class="user-img"></div>
+          <p class="user-name">대전 동부</p>
+          <p class="user-id">deajeon-east</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <section class="tkita_note">
+
+    <div class="tkita_note_list">
+      <div class="note_menu">
+        <div class="menu-list">
+          <ul class="note-list">
+            <li class="context-menu-one">
+              <button class="folder folder1 depth1">
+                <span class="arrow"></span>
+                <span class="folder-state"></span>
+                노트목록
+                <span class="plus"></span>
+              </button>
+              <ul class="folder-list">
+                <li class="context-menu-two">
+                  <a class="active depth2" href="">
+                    <span class="arrow"></span>
+                    <span class="folder-state"></span>
+                    폴더이름1
+                  </a>
+                </li>
+                <li class="context-menu-two">
+                  <a href="" class=" depth2">
+                    <span class="arrow"></span>
+                    <span class="folder-state"></span>
+                    폴더이름2
+                  </a>
+                </li>
+                <li class="context-menu-two">
+                  <a href="" class=" depth2">
+                    <span class="arrow"></span>
+                    <span class="folder-state"></span>
+                    폴더이름3
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="trash">
+            <button type="button">휴지통<span>23</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="meeting-list">
+        <div class="alert blue">
+          <p>(5)개의 회의기록을 선택했습니다. </p>
+        </div>
+        <div class="title">
+          <div class="folder-name">
+            <img src="img/folder_open.svg" alt="폴더" />
+            <span>폴더이름</span>
+          </div>
+          <div class="breadcrumb" id="sortable1">
+            <img src="img/folder_open_black.svg" alt="폴더" />
+            노트목록
+            <img src="img/breadcrumb_arrow.svg" alt="화살표" />
+            폴더이름
+          </div>
+        </div>
+        <div class="entire-list">
+          <div class="white-bg">
+            <div class="title">
+              <div>
+                <p>전체회의<b>(151)</b></p>
+                <button class="act-btn delete" data-bs-toggle="modal" data-bs-target="#erase">삭제</button>
+                <button class="act-btn move" data-bs-toggle="modal" data-bs-target="#move">이동</button>
+                <button class="act-btn download">다운로드</button>
+              </div>
+              <div>
+                <button class="file-upload" data-bs-toggle="modal" data-bs-target="#file">새 파일 업로드</button>
+                <div class="note-dropdown">
+                  <div class="dropdown array">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <p class="note-title">정렬</p>
+                      <span class="note-arrow"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">최신순</a></li>
+                      <li><a class="dropdown-item" href="#">과거순</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown month">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <p class="note-title">필터</p>
+                      <span class="note-arrow"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">전체보기</a></li>
+                      <li><a class="dropdown-item" href="#">1월</a></li>
+                      <li><a class="dropdown-item" href="#">2월</a></li>
+                      <li><a class="dropdown-item" href="#">3월</a></li>
+                      <li><a class="dropdown-item" href="#">4월</a></li>
+                      <li><a class="dropdown-item" href="#">5월</a></li>
+                      <li><a class="dropdown-item" href="#">6월</a></li>
+                      <li><a class="dropdown-item" href="#">7월</a></li>
+                      <li><a class="dropdown-item" href="#">8월</a></li>
+                      <li><a class="dropdown-item" href="#">9월</a></li>
+                      <li><a class="dropdown-item" href="#">10월</a></li>
+                      <li><a class="dropdown-item" href="#">11월</a></li>
+                      <li><a class="dropdown-item" href="#">12월</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="inputWrap">
+                  <input class="search-input inputClear" type="text" placeholder="Search" />
+                  <button class="btnClear"></button>
+                </div>
+              </div>
+            </div>
+            <div class="conference-list">
+              <div class="fixedHeader">
+                <table id="sortable2" class="connectedSortable list-group">
+                  <colgroup>
+                    <col width="" />
+                    <col width="" />
+                    <col width="586px" />
+                    <col width="" />
+                    <col width="" />
+                    <col width="" />
+                    <col width="" />
+                    <col width="" />
+                  </colgroup>
+                  <thead>
+                    <tr class="list-group-item nested-1">
+                      <th>
+                        <!-- <input type="checkbox" id="cbx_chkAll" /> -->
+                        <label class="container-chk blue">
+                          <input type="checkbox" id="cbx_chkAll" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </th>
+                      <th>NO.</th>
+                      <th>회의명</th>
+                      <th>등록일</th>
+                      <th>추가업로드(.zip)</th>
+                      <th>접수상태</th>
+                      <th>수정</th>
+                      <!-- 관리자에서 상태변경이 추가됨 -->
+                      <!-- <th>상태변경</th> -->
+                      <th>다운로드</th>
+                    </tr>
+                  </thead>
+                  <tbody id="list" class="list-group">
+                    <tr class="list-group-item nested-1 context-menu-modify complete">
+                      <td>
+                        <label class="container-chk blue">
+                          <input type="checkbox" name="chk" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td class="meeting-name">20230116_1610_2023-11</td>
+                      <td class="date">2023년 01월 11일 16시 19분</td>
+                      <td>
+                        <div class="zip"></div>
+                      </td>
+                      <td>
+                        <span class="receipt complete">수정완료</span>
+                      </td>
+                      <td>
+                        <div class="state possible">가능</div>
+                      </td>
+                      <!-- 관리자에서 상태변경이 추가됨 -->
+                      <!-- <td>
+                        <div class="note-dropdown">
+                          <div class="dropdown change">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <p class="note-title">상태변경</p>
+                              <span class="note-arrow"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="">
+                              <li><a class="dropdown-item" href="#">등록완료</a></li>
+                              <li><a class="dropdown-item" href="#">수정중</a></li>
+                              <li><a class="dropdown-item" href="#">수정완료</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </td> -->
+                      <td>
+                        <button class="download"></button>
+                      </td>
+                    </tr>
+                    <tr class="list-group-item nested-1 disabled">
+                      <td>
+                        <label class="container-chk blue">
+                          <input type="checkbox" name="chk" disabled check />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>2</td>
+                      <td class="meeting-name">20230116_1610_2023-11</td>
+                      <td class="date">2023년 01월 11일 16시 19분</td>
+                      <td>
+                        <div class="zip"></div>
+                      </td>
+                      <td>
+                        <span class="receipt editing">수정중</span>
+                      </td>
+                      <td>
+                        <div class="state possible">가능</div>
+                      </td>
+                      <td>
+                        <button class="download"></button>
+                      </td>
+                    </tr>
+                    <tr class="list-group-item nested-1 context-menu-insert insert">
+                      <td>
+                        <label class="container-chk blue">
+                          <input type="checkbox" name="chk" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>3</td>
+                      <td class="meeting-name">20230116_1610_2023-11</td>
+                      <td class="date">2023년 01월 11일 16시 19분</td>
+                      <td>
+                        <div class="zip"></div>
+                      </td>
+                      <td>
+                        <span class="receipt insert">등록완료</span>
+                      </td>
+                      <td>
+                        <div class="state possible">가능</div>
+                      </td>
+                      <td>
+                        <button class="download"></button>
+                      </td>
+                    </tr>
+                    <tr class="list-group-item nested-1 context-menu-none fileNone">
+                      <td>
+                        <label class="container-chk blue">
+                          <input type="checkbox" name="chk" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>1</td>
+                      <td class="meeting-name">20230116_1610_2023-11</td>
+                      <td class="date">2023년 01월 11일 16시 19분</td>
+                      <td>
+                        <div class="zip"></div>
+                      </td>
+                      <td>
+                        <span class="receipt fileNone">파일없음</span>
+                      </td>
+                      <td>
+                        <div class="state impossible">불가</div>
+                      </td>
+                      <td>
+                        <button class="download" disabled></button>
+                      </td>
+                    </tr>
+                    <tr class="list-group-item nested-1 context-menu-insert insert">
+                      <td>
+                        <label class="container-chk blue">
+                          <input type="checkbox" name="chk" />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>3</td>
+                      <td class="meeting-name">20230116_1610_2023-11</td>
+                      <td class="date">2023년 01월 11일 16시 19분</td>
+                      <td>
+                        <div class="zip"></div>
+                      </td>
+                      <td>
+                        <span class="receipt insert">등록완료</span>
+                      </td>
+                      <td>
+                        <div class="state possible">가능</div>
+                      </td>
+                      <td>
+                        <button class="download"></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 파일등록 -->
+    <div class="modal fade" id="file" tabindex="-1" aria-labelledby="WithdrawalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- <div class="modal-header">
+          </div> -->
+          <div class="modal-body padding-0">
+            <h2>파일 등록</h2>
+            <div class="file-plus">
+              <div class="file-text">
+                <div></div>
+                <p class="text-change empty">
+                  <span>Drag & Drop</span>
+                  <br />
+                  <span><b>음성파일</b> , 또는 <b>텍스트 파일</b>을 등록해 보세요.</span>
+                </p>
+                <p>등록 가능한 파일포맷 (.wav, .txt) </p>
+              </div>
+            </div>
+            <div class="filefind">
+              <label for="newFile" class="file-upload">새 파일 업로드</label>
+              <input type="file" id="newFile" />
+            </div>
+            <div class="file-none">
+              <label class="container-chk blue">
+                <input type="checkbox" name="check_none" class="none-check">
+                <span class="checkmark circle"></span>
+                <span class="label-text">파일이 없습니다</span>
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer padding-0">
+            <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close">취소</button>
+            <button type="button" class="btn confirm upload-complete" disabled>완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 폴더이동 -->
+    <div class="modal fade" id="move" tabindex="-1" aria-labelledby="WithdrawalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content note-modal-content">
+          <!-- <div class="modal-header">
+          </div> -->
+          <div class="modal-body padding-0">
+            <h2>폴더 이동...</h2>
+            <div class="move-body">
+              <div class="inputWrap" style="width: 100%; margin-bottom: 15px;">
+                <input class="search-input inputClear" type="text" placeholder="Search" style="width: 100%;" />
+                <button class="btnClear"></button>
+              </div>
+              <div class="move-folder">
+                <label class="container-chk blue">
+                  <input type="radio" name="chk">
+                  <span class="checkmark circle"></span>
+                  <span class="label-name">폴더이름</span>
+                </label>
+              </div>
+              <div class="move-folder">
+                <label class="container-chk blue">
+                  <input type="radio" name="chk">
+                  <span class="checkmark circle"></span>
+                  <span class="label-name">폴더이름</span>
+                </label>
+              </div>
+              <div class="move-folder">
+                <label class="container-chk blue">
+                  <input type="radio" name="chk">
+                  <span class="checkmark circle"></span>
+                  <span class="label-name">폴더이름</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer padding-0">
+            <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close">취소</button>
+            <button type="button" class="btn confirm" disabled>완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 삭제 -->
+    <div class="modal fade" id="erase" tabindex="-1" aria-labelledby="WithdrawalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content note-modal-content">
+          <!-- <div class="modal-header">
+          </div> -->
+          <div class="modal-body padding-0">
+            <h2>5개의 회의기록을 삭제할까요?</h2>
+            <p class="comment">폴더의 회의기록이 휴지통으로 이동됩니다.</p>
+          </div>
+          <div class="modal-footer padding-0">
+            <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close">취소</button>
+            <button type="button" class="btn delete">삭제</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 기록 실패 -->
+    <div class="modal fade" id="" tabindex="-1" aria-labelledby="WithdrawalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content note-modal-content">
+          <!-- <div class="modal-header">
+          </div> -->
+          <div class="modal-body padding-0">
+            <h2>Tikita note 기록을 실패하셨다구요 ?</h2>
+            <p class="comment">
+              등록할 파일이 없는 경우 아래 파일명을 기재해 <br />
+              기록 생성후 <b class="brand-color">추가파일 업로드</b>를 통해 <b class="brand-color">zip 파일</b>을 올려주세요. <br />
+              (등록 후 파일명은 수정할 수 없습니다)
+            </p>
+            <input class="custom-input-modal" type="text" placeholder="이름" />
+          </div>
+          <div class="modal-footer padding-0">
+            <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close">취소</button>
+            <button type="button" class="btn confirm" disabled>만들기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 업로드 중 -->
+    <div class="modal fade" id="" tabindex="-1" aria-labelledby="WithdrawalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content note-modal-content">
+          <!-- <div class="modal-header">
+          </div> -->
+          <div class="modal-body padding-0">
+            <h2>업로드 중</h2>
+            <div class="gauge-box">
+              <div class="count-gauge">
+                <div class="gauge" per="100" style="width: 100%;"></div>
+                <p class="count">100%</p>
+            </div>
+            <div class="loading-c">
+                <span class="download-loading" style="display: none;">Loading...</span>
+                <span class="download-com" style="display: inline;">
+                    다운로드완료
+                    <img src="img/login-check.svg" alt="완료">
+                </span>
+            </div>
+            </div>
+            <p class="comment">업로드가 완료되었습니다.</p>
+          </div>
+          <div class="modal-footer padding-0">
+            <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 이름 바꾸기 -->
+    <div class="modal fade" id="" tabindex="-1" aria-labelledby="WithdrawalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content note-modal-content">
+          <!-- <div class="modal-header">
+          </div> -->
+          <div class="modal-body padding-0">
+            <h2>이름 바꾸기</h2>
+            <p class="comment">이름</p>
+            <div class="inputWrap">
+              <input class="custom-input-modal inputClear" type="text" placeholder="Search" />
+              <button class="btnClear"></button>
+            </div>
+          </div>
+          <div class="modal-footer padding-0">
+            <button type="button" class="btn cancel" data-bs-dismiss="modal" aria-label="Close">취소</button>
+            <button type="button" class="btn confirm" disabled>완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <footer></footer>
+
+  <script>
+    $(document).ready(function () {
+      $(document).on("click", "#cbx_chkAll", function () {
+        if ($("#cbx_chkAll").is(":checked")) {
+          $("input[name=chk]").prop("checked", true);
+        } else {
+          $("input[name=chk]").prop("checked", false);
+        }
+
+        if ($(this).is(":checked") == true) {
+          $("input[name=chk]").parents("tr").addClass("check").addClass("check-change");
+          $("input[name=chk]:disabled").parents("tr").removeClass("check").removeClass("check-change");
+          $("tr").removeClass("context-menu-modify context-menu-insert context-menu-none");
+        } else {
+          $("input[name=chk]").parents("tr").removeClass("check").removeClass("check-change");
+          if ($(".complete").hasClass("complete")) {
+            $(".complete").addClass("context-menu-modify")
+          }
+          if ($(".insert").hasClass("insert")) {
+            $(".insert").addClass("context-menu-insert")
+          }
+          if ($(".fileNone").hasClass("fileNone")) {
+            $(".fileNone").addClass("context-menu-none")
+          }
+        }
+      });
+
+      $(document).on("click", "input[name=chk]", function () {
+        var total = $("input[name=chk]").length;
+        var checked = $("input[name=chk]:checked").length;
+
+        if (total != checked) {
+          $("#cbx_chkAll").prop("checked", false);
+          $(this).parents("tr").removeClass("check");
+        } else {
+          $("#cbx_chkAll").prop("checked", true);
+          $(this).parents("tr").addClass("check");
+        }
+
+        if ($(this).is(":checked") == true) {
+          $(this).parents("tr").addClass("check").addClass("check-change");
+        } else {
+          $(this).parents("tr").removeClass("check").removeClass("check-change");
+        }
+
+      });
+
+      // context-menu-modify => complete
+      // context-menu-insert => insert
+      // context-menu-none => fileNone
+
+      $(document).on("change", "tr", function () {
+        if ($(".check-change").hasClass("check-change")) {
+          $(this).removeClass("context-menu-modify context-menu-insert context-menu-none");
+        } else {
+          if ($(this).hasClass("complete")) {
+            $(".complete").addClass("context-menu-modify")
+          }
+          if ($(this).hasClass("insert")) {
+            $(".insert").addClass("context-menu-insert")
+          }
+          if ($(this).hasClass("fileNone")) {
+            $(".fileNone").addClass("context-menu-none")
+          }
+        }
+      });
+    });
+
+    const $drop = document.querySelector(".file-plus");
+    const $title = document.querySelector(".text-change");
+    const $complete = document.querySelector(".upload-complete");
+    const $check = document.querySelector(".none-check");
+
+    $check.addEventListener("click", function () {
+      if ($check.checked) {
+        $complete.disabled = false;
+      } else {
+        $complete.disabled = true;
+      }
+    }); 
+
+    // 드래그한 파일 객체가 해당 영역에 놓였을 때
+    $drop.ondrop = (e) => {
+      e.preventDefault();
+      $drop.className = "file-plus";
+
+      // 파일 리스트
+      const files = [...e.dataTransfer?.files];
+
+      if ($title.classList.contains("empty")) {
+        $title.innerHTML = `<p>` +
+          files.map(v => v.name).join("<br>");
+        + `</p>`;
+        $title.classList.remove("empty");
+      } else {
+        $title.innerHTML +=
+          `<p>` +
+          files.map(v => v.name).join("<br>");
+        + `</p>`
+      }
+
+      $complete.disabled = false;
+
+    }
+
+    // ondragover 이벤트가 없으면 onDrop 이벤트가 실핻되지 않습니다.
+    $drop.ondragover = (e) => {
+      e.preventDefault();
+    }
+
+    // 드래그한 파일이 최초로 진입했을 때
+    $drop.ondragenter = (e) => {
+      e.preventDefault();
+
+      $drop.classList.add("active");
+    }
+
+    // 드래그한 파일이 영역을 벗어났을 때
+    $drop.ondragleave = (e) => {
+      e.preventDefault();
+
+      $drop.classList.remove("active");
+    }
+
+  </script>
+
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/contextMenu.js"></script>
+  <script src="js/multisortable.js"></script>
+  <script src="js/sortable.js"></script>
+  <script src="js/gauge.js"></script>
+  <!-- <script src="jquery/jquery.min.js"></script> -->
+  <script src="jquery/jquery.contextMenu.js"></script>
+  <script src="jquery/jquery.ui.position.js"></script>
+  <script src="jquery/jquery.multisortable.js"></script>
+  <script src="jquery/jquery-ui.min.js"></script>
+</body>
+
+</html>

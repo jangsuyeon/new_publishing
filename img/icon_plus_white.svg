@@ -1,0 +1,4 @@
+<svg id="add_플러스" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path id="矩形" d="M20,0V20H0V0Z" fill="none"/>
+  <path id="Union" d="M4.812,11.25H6.437V6.438H11.25V4.813H6.437V0H4.812V4.813H0V6.438H4.812Z" transform="translate(4.375 4.375)" fill="#fff"/>
+</svg>

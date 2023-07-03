@@ -1,0 +1,20 @@
+<svg id="icon_4자막송출" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.121" y1="0.117" x2="0.905" y2="0.883" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#33b3ff"/>
+      <stop offset="0.459" stop-color="#3392ff"/>
+      <stop offset="1" stop-color="#2848ff"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="사각형_27033" data-name="사각형 27033" width="54" height="54" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_23083" data-name="그룹 23083" clip-path="url(#clip-path)">
+    <g id="타원_392" data-name="타원 392" fill="#fff" stroke="#33b3ff" stroke-width="7" opacity="0.2">
+      <circle cx="27" cy="27" r="27" stroke="none"/>
+      <circle cx="27" cy="27" r="23.5" fill="none"/>
+    </g>
+    <path id="패스_74317" data-name="패스 74317" d="M28.156,6.35a21.8,21.8,0,1,0,21.8,21.8,21.829,21.829,0,0,0-21.8-21.8m0,40.418A18.614,18.614,0,1,1,46.768,28.155,18.635,18.635,0,0,1,28.156,46.768" transform="translate(-1.155 -1.155)" fill="url(#linear-gradient)"/>
+    <path id="패스_74318" data-name="패스 74318" d="M41.163,29.575,28,21.974A1.6,1.6,0,0,0,25.6,23.355v15.2A1.595,1.595,0,0,0,28,39.939l13.165-7.6a1.6,1.6,0,0,0,0-2.763M28.795,35.794V26.119l8.379,4.838Z" transform="translate(-4.655 -3.957)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

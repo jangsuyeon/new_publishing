@@ -1,0 +1,11 @@
+<svg id="그룹_27935" data-name="그룹 27935" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51.699" height="43.662" viewBox="0 0 51.699 43.662">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_29087" data-name="사각형 29087" width="51.699" height="43.663" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_27933" data-name="그룹 27933" clip-path="url(#clip-path)">
+    <path id="패스_85622" data-name="패스 85622" d="M40.074,42.463H.92a.92.92,0,0,1-.92-.92V6.226a.92.92,0,0,1,.92-.92H18.2a.92.92,0,0,1,.694.318l3.652,4.2h19.1a.92.92,0,0,1,.92.92v2.8h8.212a.92.92,0,0,1,.9,1.128l-5.2,22.482a6.936,6.936,0,0,1-6.4,5.3M1.84,40.623H40.074A5.063,5.063,0,0,0,44.7,36.7l4.925-21.308H10.814L5.262,37.376a.92.92,0,1,1-1.783-.451L9.206,14.246a.921.921,0,0,1,.892-.694h30.63V11.667H22.13a.919.919,0,0,1-.694-.316L17.784,7.146H1.84Z" transform="translate(0 1.201)" fill="#c0c7d5"/>
+    <path id="합치기_17" data-name="합치기 17" d="M2.986,11.131,0,7.275H2.976V0h6V7.275h2.976L8.965,11.131,5.974,14.994Z" transform="translate(26.034 -0.002)" fill="#335fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

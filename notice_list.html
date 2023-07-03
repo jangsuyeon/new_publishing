@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공지 사항</title>
+  <link href="css/swiper.css" rel="stylesheet" type="text/css" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/style_mob.css" rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="trxHdr">
+      <div>
+        <a href="index.html" class="trxHdrLgo"><img src="img/img_logo.svg" /></a>
+        <nav class="trxHdrGnb">
+          <ul>
+            <li>
+              <a href="">제품소개</a>
+              <ul>
+                <li><a href="">티키타 캡션</a></li>
+                <li><a href="">티키타 노트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">공지사항</a>
+            </li>
+          </ul>
+          <div class="myInfo">
+            <div class="myInfo-site">
+              <button class="myInfo-site-button" type="button">MY정보<span class="sr-only">열림</span></button>
+              <nav class="myInfo-site-nav">
+                <a href="member_info.html">회원정보</a>
+                <a href="in_use_service.html">이용중인서비스</a>
+                <a href="license_insert.html">라이센스등록</a>
+                <a href="payment_details.html">결제내역</a>
+                <a href="event_management.html">이벤트관리</a>
+              </nav>
+            </div>
+          </div>
+          <div class="lgnInfo">
+            <ul>
+              <li><a href="">로그인</a></li>
+              <li><a href="">회원가입</a></li>
+            </ul>
+          </div>
+
+          <div class="language">
+            <ul>
+              <li><a class="click" href="">KR</a></li>
+              <li><a href="">EN</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top none">
+      <div class="container">
+        <div class="flex">
+          <div class="logoMob_toggler" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand logo-image" href="index.html">
+              <img src="img/mobile/logo_mob.svg" alt="alternative">
+            </a>
+            <div class="gnbMob">
+              <div class="lgnInfo">
+                <ul>
+                  <li><a href="login.html">로그인</a></li>
+                  <li><a href="sign_up.html">회원가입</a></li>
+                </ul>
+              </div>
+              <div class="language">
+                <ul>
+                  <li><a class="click" href="">KR</a></li>
+                  <li><a href="">EN</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome mob-bars"></span>
+            <span class="navbar-toggler-awesome mob-times"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse mob-menu-list" id="navbarsExampleDefault">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="sub-menu-down">제품정보<span class="sub-menu-arrow"></span></a>
+              <ul class="sub-menu">
+                <li><a href="product_info_caption.html">티키타 캡션</a></li>
+                <li><a href="product_info_note.html">티키타 노트</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="notice_list.html">공지사항</a>
+            </li>
+            <li>
+              <a class="sub-menu-down">MY정보<span class="sub-menu-arrow"></span></a>
+              <ul class="sub-menu">
+                <li><a href="member_info.html">회원정보</a></li>
+                <li><a href="in_use_service.html">이용중인서비스</a></li>
+                <li><a href="license_insert.html">라이센스등록</a></li>
+                <li><a href="payment_details.html">결제내역</a></li>
+                <li><a href="event_management.html">이벤트관리</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-event">
+            <div class="event-things signUp-event">
+              <a href="">
+                <div class="event-img"></div>
+                <p>회원가입 이벤트</p>
+              </a>
+            </div>
+            <div class="event-things inquiry">
+              <a href="">
+                <div class="event-img"></div>
+                <p>문의하기</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="page-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-main-title">
+              <p>공지 사항</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-common menu-none notice">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="flex-container">
+              <div class="page-content">
+                <h3>공지사항</h3>
+                <div class="InfoTable notice-table table-responsive">
+                  <table>
+                    <tr>
+                      <th>번호</th>
+                      <th>제목</th>
+                      <th>첨부</th>
+                      <th>작성자</th>
+                      <th>작성일</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="title">[Live Caption 가이드] 스테레오 믹스 장치가 없을 때의 스테레오 설정 방법</td>
+                      <td>
+                        <a class="download" href="" download>다운로드</a>
+                      </td>
+                      <td>관리자</td>
+                      <td>2022.03.21</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <div class="terms">
+                <a href="">개인정보처리방침</a>
+                <a href="">서비스 이용 약관</a>
+              </div>
+              <div class="company_info">
+                <div>
+                  <p>COMPANY INFO</p>
+                  <div>
+                    <span class="title">기업명</span>
+                    <span class="cont">(주)에어사운드</span>
+                  </div>
+                  <div>
+                    <span class="title">대표</span>
+                    <span class="cont">백민호</span>
+                  </div>
+                  <div>
+                    <span class="title">사업자등록번호</span>
+                    <span class="cont">318-81-00647</span>
+                  </div>
+                  <div style="margin-right: 0;">
+                    <span class="title">통신판매업번호</span>
+                    <span class="cont">2018-대전유성-0101</span>
+                  </div>
+                  <div>
+                    <span class="title">주소</span>
+                    <span class="cont">주소 [34014] 대전광역시 유성구 테크노1호 75, 208호 (관평동)</span>
+                  </div>
+                </div>
+                <div>
+                  <p>CUSTOMER</p>
+                  <div>
+                    <span class="title">대표번호</span>
+                    <span class="cont">042-826-8400</span>
+                  </div>
+                  <div>
+                    <span class="title">메일</span>
+                    <span class="cont">support@tkita.ai</span>
+                  </div>
+                  <div style="margin: 0;">
+                    <!-- <span class="title"></span> -->
+                    <span class="cont">평일 09:00 ~ 18:00 (점심11:30 ~ 12:30) 주말, 공휴일 휴무</span>
+                  </div>
+                </div>
+              </div>
+              <div class="copyright">&copy; Copyright 2023 AIRSOUND Inc. All Rights Reserved</div>
+              <div class="footer_logo">
+                <img src="img/footer_logo.svg" alt="footer_logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/bootstrap.min_tivo.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
